@@ -8,6 +8,7 @@ import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.Autos;
 import frc.robot.commands.ClimbUp;
 import frc.robot.commands.ClimbDown;
+import frc.robot.commands.ClimbStop;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.Climb;
 import frc.robot.subsystems.ExampleSubsystem;
@@ -59,6 +60,8 @@ public class RobotContainer {
 
     climbUp.onTrue(new ClimbUp());
     climbDown.onTrue(new ClimbDown());
+    climbUp.onFalse(new ClimbStop());
+    climbDown.onFalse(new ClimbStop());
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.
     m_driverController.b().whileTrue(m_exampleSubsystem.exampleMethodCommand());
