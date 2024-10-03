@@ -14,6 +14,8 @@ package frc.robot;
  */
 public final class Constants {
   public final static int ClimbMotorPort = 1;
+  public final static int ClimbLimitTopPort = 2;
+  public final static int ClimbLimitBotPort = 2;
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
